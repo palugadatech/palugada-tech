@@ -14,12 +14,14 @@ const Services = () => {
       subtitle: "Cocok untuk UMKM",
       price: "499rb",
       duration: "3–5 Hari",
-      description: "Website 1 halaman praktis untuk mulai bangun branding.",
+      description: "Website 1 halaman praktis untuk mulai bangun website.",
       features: [
         "Landing Page Fokus Konversi",
-        "Domain .my.id & Hosting",
+        "Domain .web.id & Hosting",
         "Tombol WhatsApp Direct",
         "Google Maps Integration",
+        "Revisi 2x",
+        "Website Cepat & Responsif",
       ],
       cta: "Pilih Paket Starter",
       isPopular: false,
@@ -38,7 +40,8 @@ const Services = () => {
         "Desain Premium Custom",
         "Bisa Edit Konten Sendiri",
         "Formulir Leads Database",
-        "Revisi Lebih Banyak (6x)",
+        "Revisi 6x",
+        "Website Cepat & Responsif",
       ],
       cta: "Bangun Bisnis Sekarang",
       isPopular: true,
@@ -56,6 +59,8 @@ const Services = () => {
         "Manajemen Stok & Harga",
         "Mobile-First Design",
         "Panduan Kelola Mandiri",
+        "Revisi 4x",
+        "Website Cepat & Responsif",
       ],
       cta: "Mulai Jualan Online",
       isPopular: false,
@@ -73,6 +78,8 @@ const Services = () => {
         "Dashboard Internal/Admin",
         "Integrasi API & Database",
         "Support Teknis Prioritas",
+        "Revisi Sesuai Kesepakatan",
+        "Website Cepat & Responsif",
       ],
       cta: "Konsultasi Gratis",
       isPopular: false,
@@ -189,7 +196,9 @@ const Services = () => {
                       const msg = encodeURIComponent(
                         `Halo, saya ingin tanya paket ${service.title}`,
                       );
-                      window.open(`https://wa.me/${whatsappNumber}?text=${msg}`);
+                      window.open(
+                        `https://wa.me/${whatsappNumber}?text=${msg}`,
+                      );
                     }}
                   >
                     {service.cta}
