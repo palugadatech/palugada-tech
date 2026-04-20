@@ -61,7 +61,7 @@ const Hero = () => {
           <motion.div
             animate={{ y: [0, -10, 0] }}
             transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="absolute -top-6 -right-6 z-20 bg-white p-4 rounded-xl shadow-xl hidden md:block"
+            className="absolute -top-6 -right-6 z-20 bg-white p-4 rounded-xl shadow-xl"
           >
             <div className="flex items-center gap-3"> 
               <div>
@@ -74,7 +74,7 @@ const Hero = () => {
           <motion.div
              animate={{ y: [0, 10, 0] }}
              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-            className="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded-xl shadow-xl hidden md:block"
+            className="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded-xl shadow-xl"
           >
             <div className="flex items-center gap-3">
               <div>
