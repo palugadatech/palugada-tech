@@ -1,87 +1,187 @@
-import React from 'react';
-import { Badge } from '../ui/badge';
-import { motion } from 'framer-motion';
-import { ExternalLink } from 'lucide-react';
+import React from "react";
+import { Badge } from "../ui/badge";
+import { motion } from "framer-motion";
+import { ExternalLink, ArrowRight, Lock } from "lucide-react";
 
 const Portfolio = () => {
   const projects = [
     {
-      title: "Sembako Makmur Jaya",
-      category: "Toko Online",
-      image: "https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=800",
-      tag: "UMKM"
+      title: "Putra Interior",
+      category: "Service & Portfolio",
+      link: "https://putra-interior.vercel.app/",
+      image: "/portofolio/saputra-interior.png",
+      tag: "Freelance",
+      description:
+        "Platform showcase jasa interior profesional dengan galeri visual yang bersih dan navigasi intuitif.",
+      isPrivate: false,
     },
     {
-      title: "GlowUp Skincare",
+      title: "Dapur Rasa Nusantara",
       category: "Landing Page",
-      image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&q=80&w=800",
-      tag: "Sales"
+      link: "https://dapur-rasa-nusantara.vercel.app/",
+      image: "/portofolio/dapur-rasa-nusantara.png",
+      tag: "Kuliner",
+      description:
+        "Landing page kuliner dengan optimasi visual menu yang menggugah selera untuk meningkatkan konversi reservasi.",
+      isPrivate: false,
     },
     {
-      title: "Law Firm Pratama",
-      category: "Company Profile",
-      image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=800",
-      tag: "Branding"
+      title: "Vestra",
+      category: "Fashion Brand",
+      link: "https://vestra-ochre.vercel.app/",
+      image: "/portofolio/vestra.png",
+      tag: "E-Commerce",
+      description:
+        "Website e-commerce fashion modern yang menonjolkan karakter brand melalui layout katalog minimalis.",
+      isPrivate: false,
     },
     {
-      title: "Batik Solo Artisan",
-      category: "E-Catalog",
-      image: "https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?auto=format&fit=crop&q=80&w=800",
-      tag: "UMKM"
-    }
+      title: "Brama2689",
+      category: "Personal Portfolio",
+      link: "https://cv-brama.vercel.app/",
+      image: "/portofolio/brama.png",
+      tag: "Branding",
+      description:
+        "Digital resume & portfolio dengan pendekatan desain personal yang elegan untuk memperkuat branding profesional.",
+      isPrivate: false,
+    },
+    {
+      title: "BBMD STORE",
+      category: "Web Application (Sistem Custom)",
+      link: "#",
+      image: "/portofolio/bbmd-store.png",
+      tag: "Enterprise",
+      description:
+        "Sistem POS Internal: Manajemen stok, produk, dan analisis penjualan dalam satu dashboard terintegrasi.",
+      isPrivate: true,
+      featured: true, 
+    },
   ];
 
   return (
-    <section id="portfolio" className="py-24 px-6 bg-slate-50">
+    <section id="portfolio" className="py-24 px-6 bg-white">
       <div className="max-w-7xl mx-auto">
+        {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Hasil Kerja Nyata Kami</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Hasil Kerja Nyata Kami
+            </h2>
             <p className="text-slate-600 max-w-xl">
-              Lihat bagaimana kami membantu bisnis-bisnis lokal bertransformasi dan menjangkau lebih banyak pelanggan secara digital.
+              Lihat bagaimana kami membantu bisnis-bisnis lokal bertransformasi
+              dan menjangkau lebih banyak pelanggan secara digital.
             </p>
           </div>
-          <Badge variant="outline" className="px-4 py-1.5 border-primary text-primary text-sm font-semibold">
+          <Badge
+            variant="outline"
+            className="px-4 py-1.5 border-primary text-primary text-sm font-semibold"
+          >
             Koleksi Project Terpilih
           </Badge>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Grid System */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="group cursor-pointer"
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`group relative ${project.featured ? "md:col-span-2" : "col-span-1"}`}
             >
-              <div className="relative aspect-[4/5] rounded-2xl overflow-hidden mb-4 shadow-md group-hover:shadow-xl transition-all">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <div className="flex items-center gap-2 text-white font-medium">
-                    Lihat Demo <ExternalLink size={16} />
+              <a
+                href={project.link}
+                target={project.isPrivate ? "_self" : "_blank"}
+                rel="noopener noreferrer"
+                className={`block ${project.isPrivate ? "cursor-default" : "cursor-pointer"}`}
+                onClick={(e) => project.isPrivate && e.preventDefault()}
+              >
+                {/* Image Container */}
+                <div
+                  className={`relative overflow-hidden rounded-[2rem] bg-slate-100 shadow-sm border border-slate-100 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2 ${project.featured ? "aspect-[21/9]" : "aspect-video"}`}
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                  />
+
+                  {/* Overlay on Hover */}
+                  <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
+                    <div className="bg-white text-slate-900 p-4 rounded-full scale-50 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 shadow-xl">
+                      {project.isPrivate ? (
+                        <Lock size={24} />
+                      ) : (
+                        <ExternalLink size={24} />
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Tag Badge */}
+                  <div className="absolute top-6 left-6 flex gap-2">
+                    <span className="bg-white/90 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black tracking-[0.1em] text-slate-800 shadow-sm uppercase">
+                      {project.tag}
+                    </span>
+                    {project.isPrivate && (
+                      <span className="bg-slate-900/80 backdrop-blur-md px-4 py-1.5 rounded-full text-[10px] font-black tracking-[0.1em] text-white shadow-sm uppercase flex items-center gap-1">
+                        <Lock size={10} /> Confidential
+                      </span>
+                    )}
                   </div>
                 </div>
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-white/90 text-slate-900 hover:bg-white">{project.tag}</Badge>
+
+                {/* Text Content */}
+                <div className="mt-8 flex justify-between items-start">
+                  <div className="max-w-2xl">
+                    <p className="text-blue-600 font-bold text-xs uppercase tracking-[0.2em] mb-2">
+                      {project.category}
+                    </p>
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="mt-3 text-slate-500 leading-relaxed text-base md:text-lg">
+                      {project.description}
+                    </p>
+                  </div>
+
+                  {!project.isPrivate && (
+                    <div className="hidden sm:block mt-2">
+                      <div className="p-3 rounded-full border border-slate-200 group-hover:bg-slate-900 group-hover:text-white transition-all duration-300">
+                        <ArrowRight size={22} />
+                      </div>
+                    </div>
+                  )}
                 </div>
-              </div>
-              <h3 className="font-bold text-lg">{project.title}</h3>
-              <p className="text-slate-500 text-sm">{project.category}</p>
+              </a>
             </motion.div>
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <p className="text-slate-600 italic">
-            "Mau dibuatkan website sekeren ini untuk bisnis kamu?"
-          </p>
-        </div>
+        {/* CTA Footer Section */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          className="mt-32 relative overflow-hidden p-12 md:p-20 rounded-[3rem] bg-slate-900 text-center"
+        >
+          {/* Decorative background element */}
+          <div className="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-blue-600/20 blur-[100px] rounded-full" />
+
+          <div className="relative z-10">
+            <h3 className="text-white text-3xl md:text-4xl font-bold mb-6">
+              Punya Ide Proyek Luar Biasa?
+            </h3>
+            <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
+              Mari bertransformasi digital bersama. Kami siap membantu membangun
+              website impian untuk bisnis Anda.
+            </p>
+            <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-[0_0_30px_-10px_rgba(37,99,235,0.5)] active:scale-95 flex items-center gap-2 mx-auto">
+              Konsultasi Gratis <ArrowRight size={20} />
+            </button>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
