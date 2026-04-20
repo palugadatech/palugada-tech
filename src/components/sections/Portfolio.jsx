@@ -148,7 +148,7 @@ const Portfolio = () => {
                     <h3 className="text-2xl md:text-3xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                       {project.title}
                     </h3>
-                    <p className="mt-3 text-slate-500 leading-relaxed text-base md:text-lg">
+                    <p className="mt-3 text-slate-600 leading-relaxed text-base md:text-lg">
                       {project.description}
                     </p>
                   </div>

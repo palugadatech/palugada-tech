@@ -24,9 +24,9 @@ const Footer = () => {
             Solusi pembuatan website profesional dan terjangkau untuk UMKM Indonesia. Kami bantu bisnis Anda go digital dengan proses yang cepat dan transparan.
           </p>
           <div className="flex gap-4">
-            <a href={waUrl} className="hover:text-white transition-colors"><MessageCircle size={20} /></a>
-            <a href="#" className="hover:text-white transition-colors"><Globe size={20} /></a>
-            <a href="mailto:palugadatech.official@gmail.com" className="hover:text-white transition-colors"><Mail size={20} /></a>
+            <a href={waUrl} className="hover:text-white transition-colors" aria-label="WhatsApp"><MessageCircle size={20} /></a>
+            <a href="#" className="hover:text-white transition-colors" aria-label="Website"><Globe size={20} /></a>
+            <a href="mailto:palugadatech.official@gmail.com" className="hover:text-white transition-colors" aria-label="Email"><Mail size={20} /></a>
           </div>
         </div>
 

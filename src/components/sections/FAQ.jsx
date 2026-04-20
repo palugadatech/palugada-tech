@@ -55,7 +55,7 @@ const FAQ = () => {
 
         <div className="mt-16 p-8 bg-primary rounded-2xl text-center text-white">
           <h3 className="text-2xl font-bold mb-4">Masih ada pertanyaan lain?</h3>
-          <p className="mb-8 opacity-90 text-lg">Jangan ragu untuk tanya langsung lewat WhatsApp. Tim kami siap membantu!</p>
+          <p className="mb-8 text-lg">Jangan ragu untuk tanya langsung lewat WhatsApp. Tim kami siap membantu!</p>
           <a
             href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Halo%20palugada.tech%2C%20ada%20yang%20ingin%20saya%20tanyakan%20lagi.`}
             target="_blank"

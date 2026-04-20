@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { Button } from "../ui/button";
 import { Badge } from "../ui/badge";
 import { motion } from "framer-motion";
-import { Check, Clock, MessagesSquare, ShieldCheck } from "lucide-react";
+import { Check, Clock, ShieldCheck } from "lucide-react";
 
 const Services = () => {
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
@@ -110,7 +110,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-primary/10 text-primary border-none px-4 py-1.5 rounded-full text-sm font-semibold">
+          <Badge className="mb-4 bg-primary/10 text-blue-700 border-none px-4 py-1.5 rounded-full text-sm font-semibold">
             Pricing Plans
           </Badge>
           <h2 className="text-4xl md:text-6xl font-black mb-6 text-slate-900 tracking-tight">
@@ -119,7 +119,7 @@ const Services = () => {
               Terbaik Anda.
             </span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 max-w-2xl mx-auto">
             Harga transparan, hasil maksimal. Pilih paket yang sesuai dengan
             fase pertumbuhan bisnis Anda saat ini.
           </p>
@@ -270,7 +270,7 @@ const Services = () => {
                   </div>
                   <Button
                     variant="outline"
-                    className="border-blue-500/50 text-blue-400 hover:bg-blue-500 hover:text-white rounded-full px-6"
+                    className="border-blue-500/50 text-blue-300 hover:bg-blue-500 hover:text-white rounded-full px-6"
                   >
                     Konsultasi Gratis →
                   </Button>
@@ -280,7 +280,7 @@ const Services = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               </motion.div>
 
-              <p className="text-[11px] italic text-slate-500 flex items-center gap-2">
+              <p className="text-[11px] italic text-slate-600 flex items-center gap-2">
                 <span className="w-4 h-[1px] bg-slate-800" />* Fitur tambahan
                 bersifat fleksibel sesuai kebutuhan bisnis Anda.
               </p>

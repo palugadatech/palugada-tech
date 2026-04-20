@@ -19,14 +19,14 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-primary uppercase bg-blue-50 rounded-full">
+          <div className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-700 uppercase bg-blue-50 rounded-full">
             Jasa Web Profesional #1 di Indonesia
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
             Jasa Pembuatan Website Custom agar <span className="text-primary underline decoration-accent decoration-4 underline-offset-8">Bisnis Naik Kelas</span>.
           </h1>
-          <p className="text-lg md:text-xl text-slate-600 mb-10 leading-relaxed max-w-xl">
-            Jasa pembuatan website custom untuk UMKM, toko online, dan personal branding. Harga terjangkau, proses transparan, dan siap pakai dalam hitungan hari.
+          <p className="text-lg md:text-xl text-slate-700 mb-10 leading-relaxed max-w-xl">
+            Jasa pembuatan website custom untuk UMKM, toko online, and personal branding. Harga terjangkau, proses transparan, dan siap pakai dalam hitungan hari.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="xl" variant="whatsapp">
@@ -36,7 +36,7 @@ const Hero = () => {
               <a href="#portfolio">Lihat Hasil Kerja Kami</a>
             </Button>
           </div>
-          <div className="mt-8 flex items-center gap-4 text-sm text-slate-500 font-medium">
+          <div className="mt-8 flex items-center gap-4 text-sm text-slate-600 font-medium">
             <span>Partner Digital Terpercaya untuk UMKM Lokal</span>
           </div>
         </motion.div>
