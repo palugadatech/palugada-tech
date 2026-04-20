@@ -33,7 +33,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/logo_palugada_tech.png" alt="palugada.tech logo" className="h-8 w-auto" />
+          <img src="/logo_palugada_tech.png" alt="Logo palugada.tech jasa pembuatan website custom" className="h-8 w-auto" />
           <span className="font-bold text-xl tracking-tight text-primary">palugada.tech</span>
         </div>
 

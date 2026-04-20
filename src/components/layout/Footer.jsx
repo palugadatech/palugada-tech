@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
         <div className="col-span-1 md:col-span-2">
           <div className="flex items-center gap-2 mb-4 text-white">
-            <img src="/logo_palugada_tech.png" alt="palugada.tech logo" className="h-8 w-auto brightness-0 invert" />
+            <img src="/logo_palugada_tech.png" alt="Logo palugada.tech untuk layanan web UMKM dan toko online" loading="lazy" className="h-8 w-auto brightness-0 invert" />
             <span className="font-bold text-xl tracking-tight">palugada.tech</span>
           </div>
           <p className="max-w-sm mb-6">

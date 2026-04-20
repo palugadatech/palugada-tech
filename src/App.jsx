@@ -1,29 +1,23 @@
-import React from 'react';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import FloatingWhatsApp from './components/layout/FloatingWhatsApp';
-import Hero from './components/sections/Hero';
-import PainPoints from './components/sections/PainPoints';
-import Services from './components/sections/Services';
-import Portfolio from './components/sections/Portfolio';
-import Workflow from './components/sections/Workflow';
-import FAQ from './components/sections/FAQ';
+import React, { Suspense, lazy } from 'react';
+import { Route, Routes } from 'react-router-dom';
+
+const HomePage = lazy(() => import('./pages/HomePage'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-      <main className="flex-grow">
-        <Hero />
-        <PainPoints />
-        <Services />
-        <Portfolio />
-        <Workflow />
-        <FAQ />
-      </main>
-      <Footer />
-      <FloatingWhatsApp />
-    </div>
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-white px-6 text-center text-slate-600">
+          Memuat halaman...
+        </div>
+      }
+    >
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Suspense>
   );
 }
 
