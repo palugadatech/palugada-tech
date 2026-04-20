@@ -57,7 +57,7 @@ const FAQ = () => {
           <h3 className="text-2xl font-bold mb-4">Masih ada pertanyaan lain?</h3>
           <p className="mb-8 opacity-90 text-lg">Jangan ragu untuk tanya langsung lewat WhatsApp. Tim kami siap membantu!</p>
           <a
-            href="https://wa.me/628120164306?text=Halo%20palugada.tech%2C%20ada%20yang%20ingin%20saya%20tanyakan%20lagi."
+            href={`https://wa.me/${import.meta.env.VITE_WHATSAPP_NUMBER}?text=Halo%20palugada.tech%2C%20ada%20yang%20ingin%20saya%20tanyakan%20lagi.`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center h-12 px-8 rounded-md bg-white text-primary font-bold hover:bg-slate-100 transition-colors"

@@ -17,7 +17,8 @@ const FloatingWhatsApp = () => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  const waUrl = "https://wa.me/628120164306?text=Halo%20palugada.tech%2C%20saya%20tertarik%20ingin%20tanya%20seputar%20pembuatan%20website.";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const waUrl = `https://wa.me/${whatsappNumber}?text=Halo%20palugada.tech%2C%20saya%20tertarik%20ingin%20tanya%20seputar%20pembuatan%20website.`;
 
   return (
     <AnimatePresence>

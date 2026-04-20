@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import webMockup from "../../../public/web_mockup.jpg"
 
 const Hero = () => {
-  const waUrl = "https://wa.me/08218164616?text=Halo%20palugada.tech%2C%20saya%20tertarik%20ingin%20tanya%20seputar%20pembuatan%20website.";
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const waUrl = `https://wa.me/${whatsappNumber}?text=Halo%20palugada.tech%2C%20saya%20tertarik%20ingin%20tanya%20seputar%20pembuatan%20website.`;
 
   return (
     <section className="relative pt-32 pb-20 px-6 overflow-hidden">

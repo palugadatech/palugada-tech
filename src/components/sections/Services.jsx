@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Check, Clock, MessagesSquare, ShieldCheck } from "lucide-react";
 
 const Services = () => {
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   const services = [
     {
       id: "starter",
@@ -188,7 +189,7 @@ const Services = () => {
                       const msg = encodeURIComponent(
                         `Halo, saya ingin tanya paket ${service.title}`,
                       );
-                      window.open(`https://wa.me/6281234567890?text=${msg}`);
+                      window.open(`https://wa.me/${whatsappNumber}?text=${msg}`);
                     }}
                   >
                     {service.cta}
@@ -242,7 +243,7 @@ const Services = () => {
                 className="group relative overflow-hidden bg-gradient-to-r from-blue-600/10 via-indigo-600/10 to-transparent p-6 rounded-3xl border border-blue-500/20 cursor-pointer"
                 onClick={() =>
                   window.open(
-                    "https://wa.me/6281234567890?text=Halo, saya punya ide fitur custom untuk website saya...",
+                    `https://wa.me/${whatsappNumber}?text=Halo, saya punya ide fitur custom untuk website saya...`,
                   )
                 }
               >

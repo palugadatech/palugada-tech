@@ -17,6 +17,8 @@ const HomePage = () => {
   const description =
     'Jasa pembuatan website custom untuk web UMKM dan toko online. Harga terjangkau, proses transparan, siap pakai dalam hitungan hari. Konsultasi sekarang.';
 
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
@@ -38,11 +40,11 @@ const HomePage = () => {
       {
         '@type': 'ContactPoint',
         contactType: 'sales',
-        telephone: '+62-812-0164-306',
+        telephone: `+${whatsappNumber.startsWith('62') ? whatsappNumber : '62' + (whatsappNumber.startsWith('0') ? whatsappNumber.substring(1) : whatsappNumber)}`,
         availableLanguage: ['id'],
       },
     ],
-    sameAs: ['https://wa.me/628120164306'],
+    sameAs: [`https://wa.me/${whatsappNumber}`],
   };
 
   const breadcrumbSchema = {

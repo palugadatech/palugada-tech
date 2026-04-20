@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { ExternalLink, ArrowRight, Lock } from "lucide-react";
 
 const Portfolio = () => {
+  const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
+  const waUrl = `https://wa.me/${whatsappNumber}?text=Halo%20palugada.tech%2C%20saya%20tertarik%20ingin%20tanya%20seputar%20pembuatan%20website.`;
+
   const projects = [
     {
       title: "Putra Interior",
@@ -179,9 +182,14 @@ const Portfolio = () => {
               Mari bertransformasi digital bersama. Kami siap membantu membangun
               website impian untuk bisnis Anda.
             </p>
-            <button className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-[0_0_30px_-10px_rgba(37,99,235,0.5)] active:scale-95 flex items-center gap-2 mx-auto">
+            <a
+              href={waUrl}
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="bg-blue-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-blue-700 transition-all hover:shadow-[0_0_30px_-10px_rgba(37,99,235,0.5)] active:scale-95 flex items-center gap-2 mx-auto w-max"
+            >
               Konsultasi Gratis <ArrowRight size={20} />
-            </button>
+            </a>
           </div>
         </motion.div>
       </div>
