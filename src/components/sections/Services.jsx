@@ -18,7 +18,7 @@ const Services = () => {
         "Landing page praktis untuk validasi ide bisnis dan mulai bangun branding.",
       features: [
         "Landing Page Fokus Konversi",
-        "Domain .web.id & Hosting",
+        "Domain .my.id, .web.id & Hosting",
         "Tombol WhatsApp Direct",
         "Optimasi SEO Dasar",
         "Performa Website Cepat",
