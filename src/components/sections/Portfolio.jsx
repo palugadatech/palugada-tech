@@ -108,6 +108,8 @@ const Portfolio = () => {
                   <img
                     src={project.image}
                     alt={`Tampilan proyek ${project.title} untuk layanan ${project.category.toLowerCase()}`}
+                    width={project.featured ? "1200" : "600"}
+                    height={project.featured ? "514" : "338"}
                     loading="lazy"
                     decoding="async"
                     className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"

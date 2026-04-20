@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
 import FloatingWhatsApp from '../components/layout/FloatingWhatsApp';
 import Hero from '../components/sections/Hero';
-import PainPoints from '../components/sections/PainPoints';
-import Services from '../components/sections/Services';
-import Portfolio from '../components/sections/Portfolio';
-import Workflow from '../components/sections/Workflow';
-import FAQ from '../components/sections/FAQ';
+
+// Lazy load non-critical components
+const PainPoints = lazy(() => import('../components/sections/PainPoints'));
+const Services = lazy(() => import('../components/sections/Services'));
+const Portfolio = lazy(() => import('../components/sections/Portfolio'));
+const Workflow = lazy(() => import('../components/sections/Workflow'));
+const FAQ = lazy(() => import('../components/sections/FAQ'));
+
 import { SITE_NAME, DEFAULT_OG_IMAGE, absoluteUrl } from '../lib/seo';
 
 const HomePage = () => {
@@ -96,11 +99,13 @@ const HomePage = () => {
         <Navbar />
         <main className="flex-grow">
           <Hero />
-          <PainPoints />
-          <Services />
-          <Portfolio />
-          <Workflow />
-          <FAQ />
+          <Suspense fallback={<div className="h-20" />}>
+            <PainPoints />
+            <Services />
+            <Portfolio />
+            <Workflow />
+            <FAQ />
+          </Suspense>
         </main>
         <Footer />
         <FloatingWhatsApp />

@@ -11,7 +11,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -34,7 +34,13 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/logo_palugada_tech(no-background).png" alt="Logo palugada.tech jasa pembuatan website custom" className="h-8 w-auto" />
+          <img 
+            src="/logo_palugada_tech(no-background).png" 
+            alt="Logo palugada.tech jasa pembuatan website custom" 
+            width="32"
+            height="32"
+            className="h-8 w-auto" 
+          />
           <span className="font-bold text-xl tracking-tight text-primary">palugada.tech</span>
         </div>
 

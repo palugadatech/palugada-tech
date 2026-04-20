@@ -17,7 +17,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.5 }}
         >
           <div className="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-primary uppercase bg-blue-50 rounded-full">
             Jasa Web Profesional #1 di Indonesia
@@ -42,25 +42,25 @@ const Hero = () => {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
           className="relative"
         >
-          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white/50">
-             {/* Mockup Placeholder */}
-            <div className="bg-slate-100 aspect-video flex items-center justify-center overflow-hidden">
-               <img
+          <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white/50 bg-slate-100 aspect-video">
+             <img
                 src={webMockup}
                 alt="Mockup jasa pembuatan website custom untuk web UMKM dan toko online"
+                width="600"
+                height="338"
+                fetchpriority="high"
                 className="w-full h-full object-cover"
               />
-            </div>
           </div>
           {/* Floating Element 1 */}
           <motion.div
             animate={{ y: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 3 }}
+            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
             className="absolute -top-6 -right-6 z-20 bg-white p-4 rounded-xl shadow-xl hidden md:block"
           >
             <div className="flex items-center gap-3"> 
@@ -73,7 +73,7 @@ const Hero = () => {
           {/* Floating Element 2 */}
           <motion.div
              animate={{ y: [0, 10, 0] }}
-             transition={{ repeat: Infinity, duration: 4 }}
+             transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
             className="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded-xl shadow-xl hidden md:block"
           >
             <div className="flex items-center gap-3">
