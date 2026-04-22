@@ -1,10 +1,19 @@
-import React, { Suspense, lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React, { Suspense, lazy, useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
+import ReactGA from 'react-ga4';
 
-const HomePage = lazy(() => import('./pages/HomePage'));
-const NotFound = lazy(() => import('./pages/NotFound'));
+const HomePage = lazy(() => import("./pages/HomePage"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 function App() {
+  const location = useLocation();
+
+  useEffect(() => {
+    ReactGA.send({
+      hitType: "pageview",
+      page: location.pathname + location.search,
+    });
+  }, [location]);
   return (
     <Suspense
       fallback={
