@@ -36,7 +36,7 @@ const Navbar = () => {
         <div className="flex items-center gap-2">
           <img 
             src="/logo_palugada_tech(no-background).png" 
-            alt="Logo palugada.tech jasa pembuatan website custom" 
+            alt="Logo palugada.tech jasa pembuatan website" 
             width="32"
             height="32"
             className="h-8 w-auto" 

@@ -16,9 +16,9 @@ import { SITE_NAME, DEFAULT_OG_IMAGE, absoluteUrl } from '../lib/seo';
 
 const HomePage = () => {
   const canonicalUrl = absoluteUrl('/');
-  const title = 'Jasa Pembuatan Website Custom untuk UMKM & Toko Online';
+  const title = 'Jasa Pembuatan Website untuk UMKM & Toko Online';
   const description =
-    'Jasa pembuatan website custom untuk web UMKM dan toko online. Harga terjangkau, proses transparan, siap pakai dalam hitungan hari. Konsultasi sekarang.';
+    'Jasa pembuatan website untuk web UMKM dan toko online. Harga terjangkau, proses transparan, siap pakai dalam hitungan hari. Konsultasi sekarang.';
 
   const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER;
   

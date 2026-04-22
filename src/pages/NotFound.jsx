@@ -5,9 +5,9 @@ import { DEFAULT_OG_IMAGE, absoluteUrl } from '../lib/seo';
 
 const NotFound = () => {
   const canonicalUrl = absoluteUrl('/404');
-  const title = 'Jasa Pembuatan Website Custom | Halaman 404 Palugada';
+  const title = 'Jasa Pembuatan Website | Halaman 404 Palugada';
   const description =
-    'Halaman yang Anda cari tidak ditemukan. Kembali ke jasa pembuatan website custom palugada.tech dan lanjutkan konsultasi website UMKM Anda sekarang.';
+    'Halaman yang Anda cari tidak ditemukan. Kembali ke jasa pembuatan website palugada.tech dan lanjutkan konsultasi website UMKM Anda sekarang.';
 
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
@@ -63,7 +63,7 @@ const NotFound = () => {
             Halaman tidak ditemukan
           </h1>
           <p className="mt-6 text-lg leading-relaxed text-slate-600">
-            URL yang Anda buka tidak tersedia. Kembali ke halaman utama untuk melihat layanan jasa pembuatan website custom dan konsultasi proyek Anda.
+            URL yang Anda buka tidak tersedia. Kembali ke halaman utama untuk melihat layanan jasa pembuatan website dan konsultasi proyek Anda.
           </p>
           <Link
             to="/"

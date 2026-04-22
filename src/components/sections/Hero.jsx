@@ -23,10 +23,10 @@ const Hero = () => {
             Jasa Web Profesional #1 di Indonesia
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 text-slate-900">
-            Jasa Pembuatan Website Custom agar <span className="text-primary underline decoration-accent decoration-4 underline-offset-8">Bisnis Naik Kelas</span>.
+            Jasa Pembuatan Website agar <span className="text-primary underline decoration-accent decoration-4 underline-offset-8">Bisnis Naik Kelas</span>.
           </h1>
           <p className="text-lg md:text-xl text-slate-700 mb-10 leading-relaxed max-w-xl">
-            Jasa pembuatan website custom untuk UMKM, toko online, and personal branding. Harga terjangkau, proses transparan, dan siap pakai dalam hitungan hari.
+            Jasa pembuatan website untuk UMKM, toko online, and personal branding. Harga terjangkau, proses transparan, dan siap pakai dalam hitungan hari.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="xl" variant="whatsapp">
@@ -50,7 +50,7 @@ const Hero = () => {
           <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl border-8 border-white/50 bg-slate-100 aspect-video">
              <img
                 src={webMockup}
-                alt="Mockup jasa pembuatan website custom untuk web UMKM dan toko online"
+                alt="Mockup jasa pembuatan website untuk UMKM"
                 width="600"
                 height="338"
                 fetchpriority="high"
